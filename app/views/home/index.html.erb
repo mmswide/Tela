@@ -1,0 +1,12 @@
+<%= form_for @purchase, remote: true do |f| %>
+  <div class="purchase_section">
+    <div class="products">
+      <% Product.find_each do |product| %>
+        <%= render product %>
+      <% end %>
+    </div>
+    <div class="message red hide">There's been an error!</div>
+
+    <%= f.submit 'Purchase!', class: 'purchase_btn' %>
+  </div>
+<% end %>

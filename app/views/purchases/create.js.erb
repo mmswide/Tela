@@ -1,0 +1,7 @@
+var state = "<%= @state %>";
+if(state == 'false'){
+  $('.message').removeClass('hide');
+  $('.purchase_btn').removeAttr('disabled');
+}else{
+  $('.purchase_section').html('Thanks for your purchase!');
+}
